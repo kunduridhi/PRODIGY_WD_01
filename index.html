@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Navigation Menu</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+
+  <!-- Navigation Menu -->
+  <div id="navbar" style="
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s;
+    z-index: 1000;
+  ">
+    <a href="#" style="color: white; margin: 0 15px; text-decoration: none; font-size: 18px;" 
+       onmouseover="this.style.color='yellow'" 
+       onmouseout="this.style.color='white'">Home</a>
+    <a href="#" style="color: white; margin: 0 15px; text-decoration: none; font-size: 18px;" 
+       onmouseover="this.style.color='yellow'" 
+       onmouseout="this.style.color='white'">About</a>
+    <a href="#" style="color: white; margin: 0 15px; text-decoration: none; font-size: 18px;" 
+       onmouseover="this.style.color='yellow'" 
+       onmouseout="this.style.color='white'">Services</a>
+    <a href="#" style="color: white; margin: 0 15px; text-decoration: none; font-size: 18px;" 
+       onmouseover="this.style.color='yellow'" 
+       onmouseout="this.style.color='white'">Contact</a>
+  </div>
+
+  <!-- Page Content -->
+  <div style="padding-top: 70px;">
+    <div style="padding: 1000px 20px;">
+      <h1>Scroll down to see navbar change color</h1>
+      <p>This is dummy content to enable scrolling.</p>
+    </div>
+  </div>
+
+  <!-- Inline JavaScript -->
+  <script>
+    window.onscroll = function () {
+      var navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = "#222";
+      } else {
+        navbar.style.backgroundColor = "#333";
+      }
+    };
+  </script>
+
+</body>
+</html>
